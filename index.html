@@ -65,7 +65,7 @@
 									          <li><a href="#gallery">Galeria</a></li>      
 									          <li><a href="#padrinhos">Padrinhos</a></li>   
 									          <li><a href="#presentes">Lista de Presentes</a></li>                            
-                                              <li><a href="#contact">Local</a></li>
+                                              <li><a href="#local">Local</a></li>
                                         </ul>
                                   </div>
                                   <!-- /.Navbar-collapse -->
@@ -90,8 +90,51 @@
 						<div class="row">
 							<div class="col-lg-8 col-md-offset-2">
 								<div class="section-heading">
-									<div class="wow bounceInDown" data-wow-delay="0.4s">
 									<h2>Contagem Regressiva</h2>
+
+									<script>
+										var target_date = new Date("march 03, 2018").getTime();
+										var dias, horas, minutos, segundos;
+										var regressiva = document.getElementById("regressiva");
+
+										setInterval(function () {
+
+										    var current_date = new Date().getTime();
+										    var segundos_f = (target_date - current_date) / 1000;
+
+										dias = parseInt(segundos_f / 86400);
+										    segundos_f = segundos_f % 86400;
+										    
+										    horas = parseInt(segundos_f / 3600);
+										    segundos_f = segundos_f % 3600;
+										    
+										    minutos = parseInt(segundos_f / 60);
+										    segundos = parseInt(segundos_f % 60);
+
+										    document.getElementById('dia').innerHTML = dias+(" dias,")+(" ");
+											document.getElementById('hora').innerHTML = horas+(" horas,")+(" "); 
+											document.getElementById('minuto').innerHTML = minutos+("minutos e")+(" ");
+											document.getElementById('segundo').innerHTML = segundos+(" segudos");
+										  
+
+										}, 1000);
+									</script>
+
+									<div class="container">
+										<div class="row">
+											<div class="col-lg-8 col-lg-offset-2">
+												<div class="contagem">
+													<div class="section-heading text-center">
+														<table>
+															<tr><td><p class="numero" id="dia"></p>
+															</td></td><td><p class="numero" id="hora"></p></td>
+															<td><p class="numero" id="minuto"></p></td>
+															<td><p class="numero" id="segundo"></p></td></tr>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -124,20 +167,13 @@
 				<div class="col-lg-8 col-lg-offset-2">
 					
 						<div class="section-heading text-center">
-							<div class="wow bounceInDown" data-wow-delay="0.2s">
 								<h2>Como tudo começou</h2>
 								<p>O que era pra ser só um encontro no cinema, acabou virando um caso de polícia, onde 'ela' não respondia aos chamados de sua mãe no celular, e desesperada que só ela é contatou Deus e o mundo atrás de sua filha. O que ela não sabia é que ali começava uma linda história de amor.</p>
-							</div>
 						</div>
 					
 				</div>
 			</div>
 		</div>
-
-
-
-
-		<!--O que era pra ser só um encontro no cinema, acabou virando um caso de polícia, onde 'ela' não respondia aos chamados de sua mãe no celular, e desesperada que só ela é contatou Deus e o mundo atrás de sua filha. O que ela não sabia é que ali começava uma linda história de amor. -->
 
 		<div class="container wow bounceInLeft" data-wow-delay="0.2s">
 			<div class="row">
@@ -178,11 +214,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
-					<div class="wow bounceInDown" data-wow-delay="0.4s">
 					<div class="section-heading">
 						<h2>Nossa galeria de fotos</h2>
 						<p>Veja alguns breves cliques que temos</p>
-					</div>
 					</div>
 				</div>
 			</div>
@@ -207,7 +241,11 @@
             </div>
 		</div>
 	</section>
-	<!-- /Section: services -->
+	<!-- /Section: gallery -->
+
+
+	<!-- /Section: padrinhos -->
+	<!-- /Section: padrinhos -->
 
 
 	<section id="padrinhos" class="home-section text-center">
@@ -215,18 +253,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
-					<div class="wow bounceInDown" data-wow-delay="0.4s">
 					<div class="section-heading">
 						<h2>Padrinhos</h2>
-					</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<!-- AQUIIIIIIIIIIIIIIIII -->
-
-
 
 		<div class="container wow bounceInUp" data-wow-delay="0.4s">
 			<div class="row">
@@ -236,60 +268,39 @@
 				</div>
 
 				<div class="col-xs-6 col-sm-4 col-md-4">
-					<img src="img/gallery/samara.jpg" class="img-responsive" alt="img">
+					<img src="img/gallery/padrinhos/samara.jpg" class="img-responsive" alt="img">
 					<p>Samara</p>
 				</div>
 
 				<div class="col-xs-6 col-sm-4 col-md-4">
-					<img src="img/gallery/de_e_cris.jpg" class="img-responsive" alt="img">
+					<img src="img/gallery/padrinhos/de_cris.jpg" class="img-responsive" alt="img">
 					<p>De e Cris</p>
 				</div>
-			</div>
-		</div>
-
-		<div class="container">
-			<div class="row">
 
 				<div class="col-xs-6 col-sm-4 col-md-4">
-					<img src="img/luciano_cleide.png" class="img-responsive" alt="img">
+					<img src="img/gallery/padrinhos/luciano_cleide.jpg" class="img-responsive" alt="img">
 					<p>Luciano e Cleide</p>
 				</div>
 
 				<div class="col-xs-6 col-sm-4 col-md-4">
-					<img src="img/gallery/gisele_e_lucas.jpg" class="img-responsive" alt="img">
-					<p>Gisele e Lucas</p>
+					<img src="img/gallery/padrinhos/lucas_gisele.jpg" class="img-responsive" alt="img">
+					<p>Lucas e Gisele</p>
 				</div>
 
 				<div class="col-xs-6 col-sm-4 col-md-4">
-					<img src="img/gallery/lucas_e_natalia.jpg" class="img-responsive" alt="img">
+					<img src="img/gallery/padrinhos/lucas_natalia.jpg" class="img-responsive" alt="img">
 					<p>Lucas e Natália</p>
 				</div>
-			</div>
-		</div>
-
-		<div class="container">
-			<div class="row">
 
 				<div class="col-xs-6 col-sm-4 col-md-4">
-						<img src="img/fabiana.jpg" class="img-responsive" alt="img">
+					<img src="img/gallery/padrinhos/fabiana.jpg" class="img-responsive" alt="img">
 					<p>Fabiana</p>
 				</div>
 
-				<div class="col-xs-6 col-sm-4 col-md-4">
-					<img src="img/gallery/gisele_e_lucas.jpg" class="img-responsive" alt="img">
-					<p>Juninho</p>
-				</div>
-
-				<div class="col-xs-6 col-sm-4 col-md-4">
-					<img src="img/gallery/lucas_e_natalia.jpg" class="img-responsive" alt="img">
-					<p>Marizeth e Paulo</p>
-				</div>
 			</div>
 		</div>
-		
-		
-	</section>
 
+	</section>
 
 	
 
@@ -298,12 +309,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
-					<div class="wow bounceInDown" data-wow-delay="0.4s">
 					<div class="section-heading">
 						<h2>Lista de Presentes</h2>
-						<p>Nosso melhor presente será a sua presença. Mas se tiver um "troquinho" sobrando e quiser nos ajudar com uma cota para a lua-de-mel (não custa nada sonhar), agradecemos. Abaixo está dois links com várias cotas que pode ser escolhidas.
+						<p>Nosso melhor presente será a sua presença. Mas se tiver um "troquinho" sobrando e quiser nos ajudar com qualquer cota informada abaixo, agradecemos. Os dois links abaixo possui várias cotas que pode ser escolhidas e adquiridas pelo site.
 
-					</div>
 					</div>
 				</div>
 			</div>
@@ -327,7 +336,6 @@
   			</div>	
 
 		</div>	
-		
 	</section>
 
 
@@ -335,17 +343,15 @@
 	
 
 	<!-- Section: local do evento -->
-    <section id="contact" class="home-section text-center">
-		<div class="heading-contact">
+    <section id="local" class="home-section text-center">
+		<div class="heading-local">
 			<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-md-offset-2">
 					
 					<div class="section-heading">
-					<div class="wow bounceInDown" data-wow-delay="0.4s">
 					<h2>Local do evento</h2>
-					</div>
-					<p class="wow lightSpeedIn" data-wow-delay="0.3s">Se dirija ao local da festa no dia.</p>
+					<p>Se dirija ao local da festa no dia.</p>
 					</div>
 					
 				</div>
@@ -358,12 +364,12 @@
 			</div>	
 
 			<div class="col-md-6 wow bounceInRight" data-wow-delay="o.3s">
-  				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30200.539900265958!2d-42.013884!3d-18.884087!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x46743b27dbaf2fc2!2sChacara+Bella+Gv!5e0!3m2!1spt-BR!2sbr!4v1510448477847" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30200.539900265958!2d-42.013884!3d-18.884087!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x46743b27dbaf2fc2!2sChacara+Bella+Gv!5e0!3m2!1spt-BR!2sbr!4v1510448477847" width="600" height="450" frameborder="0" style="border:0; width:100%;" allowfullscreen></iframe>
   			</div>	
 
 		</div>
 	</section>
-	<!-- /Section: contact -->
+	<!-- /Section: local -->
 
 	<footer>
 		<div class="container">
@@ -371,11 +377,6 @@
 				<div class="col-md-12 col-lg-12">
 					
 				</div>
-                <!-- 
-                    All links in the footer should remain intact. 
-                    Licenseing information is available at: http://bootstraptaste.com/license/
-                    You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Lonely
-                -->
 			</div>	
 		</div>
 	</footer>
@@ -392,6 +393,7 @@
 	<script src="js/nivo-lightbox.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.js"></script>
+    <script src="js/countdown.js"></script>
 
 </body>
 
