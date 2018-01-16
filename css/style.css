@@ -45,7 +45,7 @@ h6 {
 blockquote {
 	font-family: Georgia, arial, sans-serif;
 	color: #bbb;
-	font-size: 20px;
+	font-size: 16px;
 }
 
 p {
@@ -260,8 +260,8 @@ hr {
 ============================ */
 
 .home-section {
-    padding-top: 120px;
-    padding-bottom: 110px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 	  display:block;
     position:relative;
     z-index:120;
@@ -310,7 +310,7 @@ hr {
 .intro {
 	width:100%;
 	position:relative;	
-  background: url(../img/img_dest.png) no-repeat top center;
+  background: url(../img/gallery/img_dest.png) no-repeat top center;
   /*background: url(../img/new_background2.png) no-repeat top center;
   background: url(../img/new_destaque.jpg) no-repeat top center;*/
 	background-size: cover;
@@ -367,6 +367,10 @@ hr {
 /* ===========================
 --- About
 ============================ */
+
+.story{
+  margin-bottom: 40px;
+}
 
 .lado_dele{
   margin-top: 60px;
@@ -628,11 +632,16 @@ a.btn:hover {
 }
 
 .contagem{
-  margin: 0 0 20px;
-  font-size: 16px;
+  margin: 20px 0;
+  font-size: 30px !important;
   line-height: 1.6em;
   color: #fff;
   font-family: 'Varela Round', sans-serif;
+}
+
+.numero{
+
+  font-size: 30px !important;
 }
 
 

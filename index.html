@@ -101,56 +101,60 @@
 							<div class="col-lg-8 col-md-offset-2">
 								<div class="section-heading">
 									<h2>Contagem Regressiva</h2>
-
-									<script>
-										var target_date = new Date("march 03, 2018").getTime();
-										var dias, horas, minutos, segundos;
-										var regressiva = document.getElementById("regressiva");
-
-										setInterval(function () {
-
-										    var current_date = new Date().getTime();
-										    var segundos_f = (target_date - current_date) / 1000;
-
-										dias = parseInt(segundos_f / 86400);
-										    segundos_f = segundos_f % 86400;
-										    
-										    horas = parseInt(segundos_f / 3600);
-										    segundos_f = segundos_f % 3600;
-										    
-										    minutos = parseInt(segundos_f / 60);
-										    segundos = parseInt(segundos_f % 60);
-
-										    document.getElementById('dia').innerHTML = dias+(" dias,")+(" ");
-											document.getElementById('hora').innerHTML = horas+(" horas,")+(" "); 
-											document.getElementById('minuto').innerHTML = minutos+("minutos e")+(" ");
-											document.getElementById('segundo').innerHTML = segundos+(" segudos");
-										  
-
-										}, 1000);
-									</script>
-
-									<div class="container">
-										<div class="row">
-											<div class="col-lg-8 col-lg-offset-2">
-												<div class="contagem">
-													<div class="section-heading text-center">
-														<table>
-															<tr><td><p class="numero" id="dia"></p>
-															</td></td><td><p class="numero" id="hora"></p></td>
-															<td><p class="numero" id="minuto"></p></td>
-															<td><p class="numero" id="segundo"></p></td></tr>
-														</table>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>	
+
+				<script>
+					var target_date = new Date("march 03, 2018").getTime();
+					var dias, horas, minutos, segundos;
+					var regressiva = document.getElementById("regressiva");
+
+					setInterval(function () {
+
+					    var current_date = new Date().getTime();
+					    var segundos_f = (target_date - current_date) / 1000;
+
+					dias = parseInt(segundos_f / 86400);
+					    segundos_f = segundos_f % 86400;
+					    
+					    horas = parseInt(segundos_f / 3600);
+					    segundos_f = segundos_f % 3600;
+					    
+					    minutos = parseInt(segundos_f / 60);
+					    segundos = parseInt(segundos_f % 60);
+
+					    document.getElementById('dia').innerHTML = dias+(" dias"); 
+						document.getElementById('hora').innerHTML = horas+(" horas"); 
+						document.getElementById('minuto').innerHTML = minutos+("minutos"); 
+						document.getElementById('segundo').innerHTML = segundos+(" segudos"); 
+					  
+
+					}, 1000);
+				</script>
+
+				<div class="container">
+					<div class="row">
+						<div class="contagem">
+							<div class="section-heading text-center">
+								<div class="col-xs-12 col-sm-4 col-md-3">
+								<p class="numero" id="dia"></p></div>
+								<div class="col-xs-12 col-sm-4 col-md-3">
+								<p class="numero" id="hora"></p></div>
+								<div class="col-xs-12 col-sm-4 col-md-3">
+								<p class="numero" id="minuto"></p></div>
+								<div class="col-xs-12 col-sm-4 col-md-3">
+								<p class="numero" id="segundo"></p></div>
+								
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+
 			</div>
 		</div>
 	</section>
@@ -165,7 +169,7 @@
 				<div class="col-lg-8 col-lg-offset-2">
 					
 						<div class="section-heading text-center">
-							<a href="index.html"><img src="img/coroa.png" alt="" /></a>
+							<img src="img/coroa.png" alt="" />
 						</div>
 					
 				</div>
@@ -176,7 +180,7 @@
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
 					
-						<div class="section-heading text-center">
+						<div class="section-heading text-center story" style="margin-top:30px;">
 								<h2>Como tudo começou</h2>
 								<p>O que era pra ser só um encontro no cinema, acabou virando um caso de polícia, onde 'ela' não respondia aos chamados de sua mãe no celular, e desesperada que só ela é contatou Deus e o mundo atrás de sua filha. O que ela não sabia é que ali começava uma linda história de amor.</p>
 						</div>
@@ -189,7 +193,7 @@
 			<div class="row">
 				<div class="col-md-6">
 				
-					<img src="img/first_photo.jpg" class="img-responsive img-rounded" alt="" />
+					<img src="img/gallery/first_photo.jpg" class="img-responsive img-rounded" alt="" />
 				</div>		
 				<div class="col-md-6">
 					<blockquote>
@@ -273,38 +277,43 @@
 		<div class="container wow bounceInUp" data-wow-delay="0.4s">
 			<div class="row">
 				<div class="col-xs-6 col-sm-4 col-md-4">
-					<img src="img/gallery/filipe.jpg" class="img-responsive" alt="img">
+					<img src="img/padrinhos/filipe.jpg" class="img-responsive" alt="img">
 					<p>Filipe</p>
 				</div>
 
 				<div class="col-xs-6 col-sm-4 col-md-4">
-					<img src="img/gallery/padrinhos/samara.jpg" class="img-responsive" alt="img">
+					<img src="img/padrinhos/samara.jpg" class="img-responsive" alt="img">
 					<p>Samara</p>
 				</div>
 
 				<div class="col-xs-6 col-sm-4 col-md-4">
-					<img src="img/gallery/padrinhos/de_cris.jpg" class="img-responsive" alt="img">
-					<p>De e Cris</p>
+					<img src="img/padrinhos/de_cris.jpg" class="img-responsive" alt="img">
+					<p>Dê e Cris</p>
 				</div>
 
 				<div class="col-xs-6 col-sm-4 col-md-4">
-					<img src="img/gallery/padrinhos/luciano_cleide.jpg" class="img-responsive" alt="img">
+					<img src="img/padrinhos/luciano_cleide.jpg" class="img-responsive" alt="img">
 					<p>Luciano e Cleide</p>
 				</div>
 
 				<div class="col-xs-6 col-sm-4 col-md-4">
-					<img src="img/gallery/padrinhos/lucas_gisele.jpg" class="img-responsive" alt="img">
+					<img src="img/padrinhos/lucas_gisele.jpg" class="img-responsive" alt="img">
 					<p>Lucas e Gisele</p>
 				</div>
 
 				<div class="col-xs-6 col-sm-4 col-md-4">
-					<img src="img/gallery/padrinhos/lucas_natalia.jpg" class="img-responsive" alt="img">
+					<img src="img/padrinhos/lucas_natalia.jpg" class="img-responsive" alt="img">
 					<p>Lucas e Natália</p>
 				</div>
 
 				<div class="col-xs-6 col-sm-4 col-md-4">
-					<img src="img/gallery/padrinhos/fabiana.jpg" class="img-responsive" alt="img">
+					<img src="img/padrinhos/fabiana.jpg" class="img-responsive" alt="img">
 					<p>Fabiana</p>
+				</div>
+
+				<div class="col-xs-6 col-sm-4 col-md-4">
+					<img src="img/padrinhos/juninho.jpg" class="img-responsive" alt="img">
+					<p>Juninho</p>
 				</div>
 
 			</div>
@@ -321,7 +330,7 @@
 				<div class="col-lg-8 col-lg-offset-2">
 					<div class="section-heading">
 						<h2>Lista de Presentes</h2>
-						<p>Nosso melhor presente será a sua presença. Mas se tiver um "troquinho" sobrando e quiser nos ajudar com qualquer cota informada abaixo, agradecemos. Os dois links abaixo possui várias cotas que pode ser escolhidas e adquiridas pelo site.
+						<p>Nosso melhor presente será a sua presença. Mas se tiver um "troquinho" sobrando e quiser nos ajudar com uma cota para a lua-de-mel (não custa nada sonhar), agradecemos. Abaixo está dois links com várias cotas que pode ser escolhidas.
 
 					</div>
 				</div>
@@ -333,14 +342,14 @@
 		<div class="container">
 			<div class="col-md-6 wow bounceInLeft" data-wow-delay="o.3s">
 				<a href="https://mecasei.com/jhonatan-grazielle/presentes/lua-de-mel" target="_blank">
-					<img src="img/lua-de-mel.jpg" class="img-responsive img-rounded" alt="" />
+					<img src="img/gallery/lua-de-mel.jpg" class="img-responsive img-rounded" alt="" />
 				</a>
 				<p>Lua de Mel</p>
 			</div>	
 
 			<div class="col-md-6 wow bounceInRight" data-wow-delay="o.3s">
 				<a href="https://mecasei.com/jhonatan-grazielle/presentes/nossa-casa" target="_blank">
-  					<img src="img/casa.jpg" class="img-responsive img-rounded" alt="" />
+  					<img src="img/gallery/casa.jpg" class="img-responsive img-rounded" alt="" />
   				</a>
   				<p>Nossa casa, nossa vida</p>
   			</div>	
@@ -361,7 +370,7 @@
 					
 					<div class="section-heading">
 					<h2>Local do evento</h2>
-					<p>Se dirija ao local da festa no dia.</p>
+					<p>Se dirija ao local da festa na data e horário marcado.</p>
 					</div>
 					
 				</div>
