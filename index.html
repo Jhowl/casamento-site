@@ -7,8 +7,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-	<script src="js/countdown.js"></script>
-
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112440000-1"></script>
 	<script>
@@ -100,61 +98,12 @@
 						<div class="row">
 							<div class="col-lg-8 col-md-offset-2">
 								<div class="section-heading">
-									<h2>Contagem Regressiva</h2>
+									<h2>É HOJE A FESTAAAAAAAAAA!!!!!</h2>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>	
-
-				<script>
-					var target_date = new Date("march 03, 2018").getTime();
-					var dias, horas, minutos, segundos;
-					var regressiva = document.getElementById("regressiva");
-
-					setInterval(function () {
-
-					    var current_date = new Date().getTime();
-					    var segundos_f = (target_date - current_date) / 1000;
-
-					dias = parseInt(segundos_f / 86400);
-					    segundos_f = segundos_f % 86400;
-					    
-					    horas = parseInt(segundos_f / 3600);
-					    segundos_f = segundos_f % 3600;
-					    
-					    minutos = parseInt(segundos_f / 60);
-					    segundos = parseInt(segundos_f % 60);
-
-					    document.getElementById('dia').innerHTML = dias+(" dias"); 
-						document.getElementById('hora').innerHTML = horas+(" horas"); 
-						document.getElementById('minuto').innerHTML = minutos+("minutos"); 
-						document.getElementById('segundo').innerHTML = segundos+(" segudos"); 
-					  
-
-					}, 1000);
-				</script>
-
-				<div class="container">
-					<div class="row">
-						<div class="contagem">
-							<div class="section-heading text-center">
-								<div class="col-xs-12 col-sm-4 col-md-3">
-								<p class="numero" id="dia"></p></div>
-								<div class="col-xs-12 col-sm-4 col-md-3">
-								<p class="numero" id="hora"></p></div>
-								<div class="col-xs-12 col-sm-4 col-md-3">
-								<p class="numero" id="minuto"></p></div>
-								<div class="col-xs-12 col-sm-4 col-md-3">
-								<p class="numero" id="segundo"></p></div>
-								
-							</div>
-						</div>
-						
-					</div>
 				</div>
-
-
 			</div>
 		</div>
 	</section>
