@@ -1,41 +1,25 @@
-function getTimeRemaining(endtime) {
-  var t = Date.parse(endtime) - Date.parse(new Date());
-  var seconds = Math.floor((t / 1000) % 60);
-  var minutes = Math.floor((t / 1000 / 60) % 60);
-  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-  var days = Math.floor(t / (1000 * 60 * 60 * 24));
-  return {
-    'total': t,
-    'days': days,
-    'hours': hours,
-    'minutes': minutes,
-    'seconds': seconds
-  };
-}
+var target_date = new Date("march 03, 2018").getTime();
+var dias, horas, minutos, segundos;
+var regressiva = document.getElementById("regressiva");
 
-function initializeClock(id, endtime) {
-  var clock = document.getElementById(id);
-  var daysSpan = clock.querySelector('.days');
-  var hoursSpan = clock.querySelector('.hours');
-  var minutesSpan = clock.querySelector('.minutes');
-  var secondsSpan = clock.querySelector('.seconds');
+setInterval(function () {
 
-  function updateClock() {
-    var t = getTimeRemaining(endtime);
+    var current_date = new Date().getTime();
+    var segundos_f = (current_date - target_date) / 1000;
 
-    daysSpan.innerHTML = t.days;
-    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+dias = parseInt(segundos_f / 86400);
+    segundos_f = segundos_f % 86400;
+    
+    horas = parseInt(segundos_f / 3600);
+    segundos_f = segundos_f % 3600;
+    
+    minutos = parseInt(segundos_f / 60);
+    segundos = parseInt(segundos_f % 60);
 
-    if (t.total <= 0) {
-      clearInterval(timeinterval);
-    }
-  }
+    document.getElementById('dia').innerHTML = dias+(" dias"); 
+  document.getElementById('hora').innerHTML = horas+(" horas"); 
+  document.getElementById('minuto').innerHTML = minutos+("minutos"); 
+  document.getElementById('segundo').innerHTML = segundos+(" segudos"); 
+  
 
-  updateClock();
-  var timeinterval = setInterval(updateClock, 1000);
-}
-
-var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
-initializeClock('clockdiv', deadline);
+}, 1000);
